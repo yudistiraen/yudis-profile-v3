@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Gamepad2, Bike, Code2, MapPin, Mail, Music } from 'lucide-react'
+import { Gamepad2, MonitorPlay, Code2, MapPin, Mail, Music } from 'lucide-react'
 
 function LinkedinIcon({ size = 16, color = 'currentColor', strokeWidth = 2 }) {
   return (
@@ -54,7 +54,7 @@ const INTERESTS = [
   { icon: Gamepad2, label: 'Games' },
   { icon: Music, label: 'Music' },
   { icon: Code2, label: 'Open Source' },
-  { icon: Bike, label: 'Cycling' },
+  { icon: MonitorPlay, label: 'Streaming' },
 ]
 
 export default function About() {
