@@ -173,7 +173,7 @@ export default function Hero() {
           }}>
             6+ years crafting performant, pixel-perfect interfaces for a crypto
             exchange, an energy conglomerate, and enterprise mobile apps. I turn
-            complex product requirements into clean, maintainable UI.
+            complex product requirements into clean, maintainable UI..
           </motion.p>
 
           {/* CTAs */}
