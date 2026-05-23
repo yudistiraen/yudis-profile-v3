@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Yudis\\\\Documents\\\\Workspace\\\\profile-yudis\\\\src\\\\components\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Yudis\\\\Documents\\\\Workspace\\\\profile-yudis\\\\src\\\\components\\\\ui\")"
+    ]
+  }
+}

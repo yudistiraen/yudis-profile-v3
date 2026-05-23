@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Geist", sans-serif;
+  --font-body: "Geist", sans-serif;
+
+  --color-bg: #0b0b0d;
+  --color-surface: #111114;
+  --color-elevated: #16161b;
+  --color-border: #1e1e24;
+  --color-border-subtle: #141417;
+  --color-accent: #e8a217;
+  --color-accent-hover: #f5b830;
+  --color-accent-dim: rgba(232, 162, 23, 0.1);
+  --color-accent-glow: rgba(232, 162, 23, 0.15);
+  --color-text: #edeae4;
+  --color-muted: #6b6879;
+  --color-subtle: #2e2d36;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  background-color: #0b0b0d;
+  color: #edeae4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2d36;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e8a217;
+}
+
+/* Grain overlay */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* Section transitions */
+section {
+  position: relative;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #e8a217;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(232, 162, 23, 0.25);
+  color: #edeae4;
+}
