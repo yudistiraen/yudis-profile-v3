@@ -31,7 +31,7 @@ const fadeUp = (delay = 0) => ({
 
 const PROJECTS = [
   {
-    tag: 'Crypto Exchange · 2021–Present',
+    tag: 'Crypto Exchange',
     title: 'Indodax Trading Platform',
     description:
       'Contributed to the frontend of one of Indonesia\'s largest cryptocurrency exchanges. Delivered features spanning the order book, portfolio management dashboard, and real-time price charts — all built to handle millions of concurrent users with sub-second UI responsiveness.',
@@ -41,12 +41,12 @@ const PROJECTS = [
       'Reusable component library',
       'API-driven dynamic market data',
     ],
-    stack: ['React.js', 'Vue.js', 'TypeScript', 'WebSocket', 'RESTful APIs'],
+    stack: ['NuxtJs', 'Vue.js', 'TypeScript', 'WebSocket', 'RESTful APIs', 'PHP'],
     accentColor: '#e8a217',
     gradient: 'radial-gradient(ellipse 120% 100% at 100% 0%, rgba(232,162,23,0.1) 0%, transparent 60%)',
   },
   {
-    tag: 'Energy Sector · 2019–2021',
+    tag: 'Energy Sector',
     title: 'Berau Coal Energy Portal',
     description:
       'Led frontend development for multiple internal and public-facing web portals at a national coal energy company. Translated complex data from ERP backends into clean, intuitive interfaces for corporate reporting, HR workflows, and operational monitoring.',
@@ -59,6 +59,22 @@ const PROJECTS = [
     stack: ['Vue.js', 'Angular', 'HTML/CSS', 'Axios', 'MySQL'],
     accentColor: '#7c6fff',
     gradient: 'radial-gradient(ellipse 120% 100% at 0% 100%, rgba(124,111,255,0.08) 0%, transparent 60%)',
+  },
+  {
+    tag: 'Open Source',
+    title: 'FFXIV JP Raid Dictionary',
+    description:
+      'A Dalamud plugin for Final Fantasy XIV that helps non-Japanese players understand Japanese raid terminology, Party Finder shorthand, and job abbreviations. Includes a bundled offline dictionary with live search, plus an optional AI-powered translation feature supporting OpenAI, Claude, and Google Translate.',
+    highlights: [
+      'In-game dictionary with live search',
+      'AI chat translation via /jpt command',
+      'Multi-provider support (OpenAI, Claude, Google)',
+      'Bundled offline data, no network required',
+    ],
+    stack: ['C#', '.NET', 'Dalamud SDK', 'ImGui', 'OpenAI API', 'Claude API'],
+    accentColor: '#2dd4bf',
+    gradient: 'radial-gradient(ellipse 120% 100% at 50% 0%, rgba(45,212,191,0.08) 0%, transparent 60%)',
+    link: 'https://github.com/yudistiraen/FFXIV-JP-Dictionary',
   }
 ]
 
@@ -176,7 +192,7 @@ export default function Projects() {
                     </div>
 
                     {/* Stack */}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
                       {p.stack.map(t => (
                         <span key={t} style={{
                           fontFamily: 'Geist, sans-serif',
@@ -189,6 +205,26 @@ export default function Projects() {
                           {t}
                         </span>
                       ))}
+                      {p.link && (
+                        <a
+                          href={p.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                            fontFamily: '"Geist Mono", monospace',
+                            fontSize: '0.68rem', fontWeight: 600,
+                            color: p.accentColor, textDecoration: 'none',
+                            letterSpacing: '0.06em', textTransform: 'uppercase',
+                            marginLeft: '0.5rem',
+                            transition: 'opacity 0.2s',
+                          }}
+                          onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
+                          onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+                        >
+                          View on GitHub <ArrowRight size={12} strokeWidth={2} />
+                        </a>
+                      )}
                     </div>
                   </div>
 

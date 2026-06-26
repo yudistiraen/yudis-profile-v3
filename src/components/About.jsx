@@ -11,6 +11,14 @@ function LinkedinIcon({ size = 16, color = 'currentColor', strokeWidth = 2 }) {
   )
 }
 
+function GithubIcon({ size = 16, color = 'currentColor' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={color} aria-hidden="true">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+    </svg>
+  )
+}
+
 function Sparkle({ size = 14, color = '#e8a217', style = {} }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill={color} style={style} aria-hidden="true">
@@ -110,23 +118,22 @@ export default function About() {
               display: 'flex', flexDirection: 'column', gap: '1.25rem',
             }}>
               <p>
-                I'm a frontend developer based in Depok, Indonesia, with over 6 years of
-                experience turning complex product requirements into clean, maintainable
-                interfaces. My toolkit spans <span style={{ color: '#edeae4', fontWeight: 500 }}>Angular, Vue.js, React</span> — giving me
-                the flexibility to choose the right tool for any project.
+                I'm a frontend developer based in Depok, Indonesia. Over the past 6 years
+                I've been fortunate to work on projects that helped me grow, from building
+                interfaces with <span style={{ color: '#edeae4', fontWeight: 500 }}>Angular, Vue.js, React</span> to learning
+                how to pick the right tool for different needs.
               </p>
               <p>
-                My career has taken me from building mobile applications at a digital
-                transformation startup, to crafting data-heavy UIs for a national energy
-                company, to shipping real-time trading features at one of{' '}
-                <span style={{ color: '#edeae4', fontWeight: 500 }}>Indonesia's leading cryptocurrency exchanges</span>.
-                Each role sharpened my ability to collaborate across teams, translate
-                backend data into fluid user experiences, and maintain high standards
-                under deadline pressure.
+                I started out building mobile apps at a small startup,
+                then moved on to working on internal tools for an energy company,
+                and now I'm part of the frontend team at{' '}
+                <span style={{ color: '#edeae4', fontWeight: 500 }}>a cryptocurrency exchange in Indonesia</span>.
+                Each role has taught me a lot about teamwork, translating requirements
+                into usable interfaces, and staying consistent under tight deadlines.
               </p>
               <p>
-                I care deeply about performance, accessibility, and developer ergonomics —
-                because great code should be as maintainable as it is functional.
+                I try to write code that's accessible and easy to maintain. I'm always
+                looking for ways to improve and learn from the people around me.
               </p>
             </div>
 
@@ -157,6 +164,7 @@ export default function About() {
                 { icon: MapPin, text: 'Grand Depok City, Depok, Indonesia' },
                 { icon: Mail, text: 'yudistira.enugraha@gmail.com', href: 'mailto:yudistira.enugraha@gmail.com' },
                 { icon: LinkedinIcon, text: 'linkedin.com/in/yudistira-nugraha', href: 'https://linkedin.com/in/yudistira-nugraha' },
+                { icon: GithubIcon, text: 'github.com/yudistiraen', href: 'https://github.com/yudistiraen' },
               ].map(({ icon: Icon, text, href }) => (
                 <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Icon size={14} color="#e8a217" strokeWidth={2} style={{ flexShrink: 0 }} />
